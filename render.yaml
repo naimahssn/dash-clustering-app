@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: dash-clustering-app
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:server
+    plan: free

@@ -1,0 +1,1492 @@
+2025-04-26 15:07:38,378 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 15:22:42,478 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 15:33:08,268 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 15:53:56,690 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 16:05:15,252 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 16:05:21,324 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 16:10:25,514 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 16:20:59,828 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 16:24:23,740 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 16:33:56,545 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 16:36:42,945 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 16:38:26,736 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 16:46:22,136 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 17:00:04,495 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 17:06:01,297 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 17:06:23,227 - utils.data_processing - ERROR - Erreur lors de l'upload: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+2025-04-26 17:08:43,648 - utils.ml_models - ERROR - Erreur d'entraînement: could not convert string to float: 'GT9056_1'
+2025-04-26 17:08:43,649 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: could not convert string to float: 'GT9056_1'
+2025-04-26 17:09:52,012 - utils.ml_models - ERROR - Erreur d'entraînement: 'numpy.ndarray' object has no attribute 'values'
+2025-04-26 17:09:52,012 - callbacks.clustering_callbacks - ERROR - Erreur clustering textuel: 'NoneType' object has no attribute 'astype'
+2025-04-26 18:07:45,781 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 18:17:54,101 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 23:30:29,197 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 23:35:57,580 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 23:45:00,649 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-26 23:47:41,903 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: All columns are categorical, use k-modes instead of k-prototypes.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 118, in run_clustering_callback
+    clusters = kproto.fit_predict(df.values, categorical=cat_indices)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kmodes.py", line 154, in fit_predict
+    return self.fit(X, **kwargs).predict(X, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 161, in fit
+    self.n_iter_, self.epoch_costs_, self.gamma = k_prototypes(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 261, in k_prototypes
+    assert len(categorical) != X.shape[1], \
+AssertionError: All columns are categorical, use k-modes instead of k-prototypes.
+2025-04-26 23:48:27,712 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['CLUSTER', 'count'] but received: index
+ To use the index, pass it in directly as `df.index`.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 146, in run_clustering_callback
+    dist_fig = create_cluster_distribution(result_df['CLUSTER'])
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 280, in create_cluster_distribution
+    fig = px.histogram(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 490, in histogram
+    return make_figure(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1328, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['CLUSTER', 'count'] but received: index
+ To use the index, pass it in directly as `df.index`.
+2025-04-26 23:48:52,883 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['CLUSTER', 'count'] but received: index
+ To use the index, pass it in directly as `df.index`.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 146, in run_clustering_callback
+    dist_fig = create_cluster_distribution(result_df['CLUSTER'])
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 280, in create_cluster_distribution
+    fig = px.histogram(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 490, in histogram
+    return make_figure(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1328, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['CLUSTER', 'count'] but received: index
+ To use the index, pass it in directly as `df.index`.
+2025-04-26 23:49:08,598 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['CLUSTER', 'count'] but received: index
+ To use the index, pass it in directly as `df.index`.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 146, in run_clustering_callback
+    dist_fig = create_cluster_distribution(result_df['CLUSTER'])
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 280, in create_cluster_distribution
+    fig = px.histogram(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 490, in histogram
+    return make_figure(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1328, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['CLUSTER', 'count'] but received: index
+ To use the index, pass it in directly as `df.index`.
+2025-04-26 23:49:22,072 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['CLUSTER', 'count'] but received: index
+ To use the index, pass it in directly as `df.index`.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 146, in run_clustering_callback
+    dist_fig = create_cluster_distribution(result_df['CLUSTER'])
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 280, in create_cluster_distribution
+    fig = px.histogram(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 490, in histogram
+    return make_figure(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1328, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['CLUSTER', 'count'] but received: index
+ To use the index, pass it in directly as `df.index`.
+2025-04-27 00:09:53,493 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-27 00:10:47,603 - callbacks.clustering_callbacks - ERROR - Erreur création distribution clusters: Value of 'y' is not the name of a column in 'data_frame'. Expected one of ['CLUSTER', 'count'] but received: COUNT
+2025-04-27 00:11:35,682 - callbacks.clustering_callbacks - ERROR - Erreur création distribution clusters: Value of 'y' is not the name of a column in 'data_frame'. Expected one of ['CLUSTER', 'count'] but received: COUNT
+2025-04-27 13:48:20,655 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-27 13:50:35,342 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: All arguments should have the same length. The length of argument `color` is 672, whereas the length of previously-processed arguments ['x', 'y', 'Montant engagé', 'VARIANCE'] is 916
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 133, in run_clustering_callback
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], df)
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 249, in create_tsne_plot
+    px.scatter(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1373, in process_args_into_dataframe
+    raise ValueError(
+ValueError: All arguments should have the same length. The length of argument `color` is 672, whereas the length of previously-processed arguments ['x', 'y', 'Montant engagé', 'VARIANCE'] is 916
+2025-04-27 13:51:12,311 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: All arguments should have the same length. The length of argument `color` is 818, whereas the length of previously-processed arguments ['x', 'y', 'VARIANCE', 'TAUX_ENGAGEMENT'] is 916
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 133, in run_clustering_callback
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], df)
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 249, in create_tsne_plot
+    px.scatter(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1373, in process_args_into_dataframe
+    raise ValueError(
+ValueError: All arguments should have the same length. The length of argument `color` is 818, whereas the length of previously-processed arguments ['x', 'y', 'VARIANCE', 'TAUX_ENGAGEMENT'] is 916
+2025-04-27 13:51:13,057 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: All arguments should have the same length. The length of argument `color` is 818, whereas the length of previously-processed arguments ['x', 'y', 'VARIANCE', 'TAUX_ENGAGEMENT'] is 916
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 133, in run_clustering_callback
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], df)
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 249, in create_tsne_plot
+    px.scatter(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1373, in process_args_into_dataframe
+    raise ValueError(
+ValueError: All arguments should have the same length. The length of argument `color` is 818, whereas the length of previously-processed arguments ['x', 'y', 'VARIANCE', 'TAUX_ENGAGEMENT'] is 916
+2025-04-27 13:51:26,460 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: All arguments should have the same length. The length of argument `color` is 818, whereas the length of previously-processed arguments ['x', 'y', 'VARIANCE', 'TAUX_ENGAGEMENT'] is 916
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 133, in run_clustering_callback
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], df)
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 249, in create_tsne_plot
+    px.scatter(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1373, in process_args_into_dataframe
+    raise ValueError(
+ValueError: All arguments should have the same length. The length of argument `color` is 818, whereas the length of previously-processed arguments ['x', 'y', 'VARIANCE', 'TAUX_ENGAGEMENT'] is 916
+2025-04-27 18:36:45,971 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-27 18:38:32,288 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['COUNT', 'count'] but received: CLUSTER
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 140, in run_clustering_callback
+    dist_fig = create_cluster_distribution(valid_clusters['CLUSTER'])
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 280, in create_cluster_distribution
+    px.bar(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 381, in bar
+    return make_figure(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1328, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['COUNT', 'count'] but received: CLUSTER
+2025-04-27 18:47:17,219 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-27 19:21:18,446 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: All columns are categorical, use k-modes instead of k-prototypes.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 120, in run_clustering_callback
+    clusters_ = kproto.fit_predict(processed_df.values, categorical=cat_indices)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kmodes.py", line 154, in fit_predict
+    return self.fit(X, **kwargs).predict(X, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 161, in fit
+    self.n_iter_, self.epoch_costs_, self.gamma = k_prototypes(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 261, in k_prototypes
+    assert len(categorical) != X.shape[1], \
+AssertionError: All columns are categorical, use k-modes instead of k-prototypes.
+2025-04-27 19:23:38,853 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: The parameter init="pca" cannot be used with metric="precomputed".
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 125, in run_clustering_callback
+    projection_ = tsne.fit_transform(gower_matrix)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\manifold\_t_sne.py", line 1178, in fit_transform
+    embedding = self._fit(X)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\manifold\_t_sne.py", line 898, in _fit
+    raise ValueError(
+ValueError: The parameter init="pca" cannot be used with metric="precomputed".
+2025-04-29 08:49:28,631 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 10:33:11,119 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 10:42:13,230 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 10:48:46,238 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 10:50:29,810 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 10:58:59,801 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 11:06:54,324 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 11:07:57,400 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 11:15:11,503 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 11:15:16,287 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 11:20:02,576 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 11:33:25,749 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-29 11:55:59,386 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-30 07:27:29,698 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-30 07:50:15,115 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-30 07:59:39,106 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-30 08:44:38,226 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-30 08:45:33,841 - callbacks.data_callbacks - ERROR - Erreur KPI: calculate_kpis() missing 2 required positional arguments: 'initial_col' and 'engage_col'
+2025-04-30 08:51:38,232 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-30 09:36:44,734 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-30 10:59:39,681 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-04-30 10:59:54,157 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-30 10:59:54,157 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-04-30 11:00:18,814 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-04-30 11:09:30,463 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-04-30 11:09:30,596 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-04-30 11:09:30,599 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-04-30 11:09:51,319 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-30 11:10:06,994 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-04-30 11:10:07,562 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-30 11:10:07,562 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-04-30 11:10:40,965 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-04-30 11:10:41,546 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-30 11:10:41,546 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-04-30 11:34:21,547 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-04-30 11:34:26,932 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-30 11:34:26,932 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-04-30 11:35:09,759 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-04-30 11:35:10,293 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-30 11:35:10,293 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-04-30 11:39:35,893 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-04-30 11:39:36,177 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-30 11:39:36,177 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-04-30 11:39:39,665 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-30 11:39:57,268 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-04-30 11:39:58,160 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-30 11:39:58,160 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-04-30 11:52:11,907 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-04-30 11:52:18,737 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-04-30 11:52:18,737 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 13:23:30,152 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 13:23:44,101 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 13:23:44,101 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 13:41:10,452 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 13:41:11,512 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 13:41:11,512 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 13:41:51,570 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 13:41:52,179 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 13:41:52,179 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 13:41:58,968 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-01 13:42:21,954 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 13:42:22,924 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 13:42:22,924 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 13:46:46,837 - callbacks.clustering_callbacks - ERROR - Erreur de clustering: [Errno 22] Invalid argument
+Traceback (most recent call last):
+  File "_openmp_helpers.pyx", line 66, in sklearn.utils._openmp_helpers._openmp_effective_n_threads
+KeyError: True
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 139, in run_clustering_callback
+    projection_ = tsne.fit_transform(X)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\manifold\_t_sne.py", line 1178, in fit_transform
+    embedding = self._fit(X)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\manifold\_t_sne.py", line 1046, in _fit
+    return self._tsne(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\manifold\_t_sne.py", line 1091, in _tsne
+    opt_args["kwargs"]["num_threads"] = _openmp_effective_n_threads()
+  File "_openmp_helpers.pyx", line 21, in sklearn.utils._openmp_helpers._openmp_effective_n_threads
+  File "_openmp_helpers.pyx", line 68, in sklearn.utils._openmp_helpers._openmp_effective_n_threads
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\joblib\parallel.py", line 638, in cpu_count
+    return loky.cpu_count(only_physical_cores=only_physical_cores)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\joblib\externals\loky\backend\context.py", line 143, in cpu_count
+    traceback.print_tb(exception.__traceback__)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\traceback.py", line 53, in print_tb
+    print_list(extract_tb(tb, limit=limit), file=file)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\traceback.py", line 25, in print_list
+    print(item, file=file, end="")
+OSError: [Errno 22] Invalid argument
+2025-05-01 13:58:31,376 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 13:58:32,500 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 13:58:32,500 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 13:58:46,434 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 13:58:46,921 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 13:58:47,502 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 13:58:47,502 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 13:58:47,840 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 13:58:47,840 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 13:58:55,308 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-01 13:58:55,587 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-01 13:59:31,559 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 13:59:31,749 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 13:59:32,884 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 13:59:32,884 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 13:59:33,073 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 13:59:33,075 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 14:00:27,016 - callbacks.clustering_callbacks - ERROR - Erreur clustering textuel: [Errno 22] Invalid argument
+2025-05-01 15:28:09,628 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 15:28:21,408 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 15:28:21,409 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 15:30:20,867 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 15:30:21,402 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 15:30:21,402 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 15:31:09,711 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 15:31:10,385 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 15:31:10,385 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 15:31:48,668 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 15:31:48,964 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 15:31:48,965 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 15:31:52,316 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-01 15:32:09,530 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 15:32:10,101 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 15:32:10,101 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 20:11:13,145 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 20:11:13,290 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 20:11:13,918 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 20:11:13,918 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 20:11:14,156 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 20:11:14,157 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 20:12:35,889 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 20:12:35,900 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 20:12:36,522 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 20:12:36,523 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 20:12:36,529 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 20:12:36,529 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 20:13:09,275 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 20:13:09,406 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 20:13:09,894 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 20:13:09,894 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 20:13:09,997 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 20:13:09,997 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 20:26:11,384 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 20:26:12,080 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 20:26:12,080 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 20:26:17,334 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-01 20:26:34,218 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 20:26:34,876 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 20:26:34,876 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 22:49:25,055 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 22:49:25,464 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 22:49:25,464 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 22:49:38,218 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-01 22:51:43,744 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 22:52:48,885 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 22:52:48,885 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 23:28:56,378 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 23:29:01,621 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 23:29:01,622 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 01:33:06,132 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 01:33:12,712 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 01:33:12,712 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 02:02:14,291 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 02:02:14,574 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 02:02:14,574 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 02:02:18,167 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-02 02:02:36,056 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 02:02:37,028 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 02:02:37,028 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 07:23:09,377 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 07:23:14,827 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 07:23:14,827 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 07:23:36,960 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-02 07:24:09,332 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 07:24:10,187 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 07:24:10,187 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 07:35:33,454 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 07:35:34,171 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 07:35:34,171 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 07:35:40,508 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-02 07:36:12,279 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 07:36:13,469 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 07:36:13,470 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 07:50:59,752 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 07:51:05,224 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 07:51:05,224 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 07:55:41,889 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 07:55:42,456 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 07:55:42,456 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 07:57:33,171 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 07:57:34,313 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 07:57:34,313 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 07:58:01,482 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 07:58:01,799 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 07:58:01,799 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 07:58:05,761 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-02 07:58:20,291 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 07:58:20,854 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 07:58:20,854 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 08:13:16,234 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 08:13:16,516 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 08:13:16,516 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 08:13:21,152 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-02 08:13:39,238 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 08:13:39,991 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 08:13:39,991 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 08:16:33,200 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 08:16:33,488 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 08:16:33,488 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 08:16:38,346 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-02 08:16:51,488 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 08:16:52,017 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 08:16:52,017 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 08:32:29,031 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 08:32:29,679 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 08:32:29,679 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 08:57:27,978 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 08:57:28,548 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 08:57:28,548 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 09:32:42,190 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 09:32:47,334 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 09:32:47,336 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 09:33:05,759 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-02 09:33:36,952 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 09:33:38,100 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 09:33:38,100 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 09:56:23,242 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 09:56:24,366 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 09:56:24,366 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 10:02:22,949 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-02 10:02:23,266 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 10:02:23,266 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-02 21:27:42,910 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-02 21:27:42,948 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 00:52:35,381 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 00:52:41,326 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 00:52:41,326 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:02:41,952 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:02:42,310 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:02:42,310 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:04:41,793 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:04:42,136 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:04:42,136 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:04:46,758 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-03 01:05:04,351 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:05:04,636 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:05:04,636 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:05:53,849 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:05:54,376 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:05:54,376 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:05:57,826 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-03 01:06:13,873 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:06:14,184 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:06:14,184 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:07:58,996 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:07:59,346 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:07:59,346 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:08:03,255 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-03 01:08:20,550 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:08:20,932 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:08:20,932 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:09:22,553 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:09:22,896 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:09:22,896 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:09:26,401 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-03 01:09:43,771 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:09:44,072 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:09:44,072 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:10:50,237 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:10:50,597 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:10:50,597 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:10:54,958 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-03 01:11:08,664 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:11:08,950 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:11:08,950 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:13:24,725 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:13:25,120 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:13:25,120 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:14:10,140 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:14:10,468 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:14:10,468 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 01:19:27,945 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 01:19:28,229 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 01:19:28,229 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 15:36:49,921 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 15:37:05,287 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 15:37:05,287 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 15:37:40,482 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-03 15:38:14,534 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 15:38:15,376 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 15:38:15,376 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 15:45:52,539 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 15:45:53,120 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 15:45:53,120 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 15:45:58,613 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-03 15:46:29,600 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 15:46:30,343 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 15:46:30,344 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 15:59:17,169 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 15:59:17,778 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 15:59:17,779 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 16:03:06,166 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 16:03:07,141 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 16:03:07,142 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 16:03:12,995 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-03 16:04:14,559 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 16:04:15,465 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 16:04:15,466 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 16:19:22,058 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 16:19:22,659 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 16:19:22,659 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 16:19:28,472 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-03 16:19:55,206 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 16:19:55,746 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 16:19:55,746 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 16:21:35,298 - callbacks.clustering_callbacks - ERROR - Deep clustering error: 'NoneType' object has no attribute 'get'
+2025-05-03 16:22:13,242 - callbacks.clustering_callbacks - ERROR - Clustering error: create_tsne_plot() missing 1 required positional argument: 'language'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 100, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], valid_clusters)
+TypeError: create_tsne_plot() missing 1 required positional argument: 'language'
+2025-05-03 19:48:31,505 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 19:48:43,522 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 19:48:43,522 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 19:49:10,943 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-03 19:49:32,116 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 19:49:32,503 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 19:49:32,503 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 20:15:51,180 - callbacks.clustering_callbacks - ERROR - Clustering error: create_tsne_plot() missing 1 required positional argument: 'language'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 100, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], valid_clusters)
+TypeError: create_tsne_plot() missing 1 required positional argument: 'language'
+2025-05-03 20:15:56,489 - callbacks.clustering_callbacks - ERROR - Clustering error: create_tsne_plot() missing 1 required positional argument: 'language'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 100, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], valid_clusters)
+TypeError: create_tsne_plot() missing 1 required positional argument: 'language'
+2025-05-03 20:24:02,539 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 20:24:02,830 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 20:24:02,830 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-03 23:33:26,752 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-03 23:33:27,550 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-03 23:33:27,550 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 02:45:03,667 - callbacks.clustering_callbacks - ERROR - Clustering error: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 100, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], valid_clusters,language="fr"
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 60, in create_tsne_plot
+    fig = px.scatter(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1310, in process_args_into_dataframe
+    raise ValueError(
+ValueError: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+2025-05-04 02:45:31,556 - callbacks.clustering_callbacks - ERROR - Clustering error: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 100, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], valid_clusters,language="fr"
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 60, in create_tsne_plot
+    fig = px.scatter(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1310, in process_args_into_dataframe
+    raise ValueError(
+ValueError: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+2025-05-04 02:45:41,436 - callbacks.clustering_callbacks - ERROR - Clustering error: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 100, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], valid_clusters,language="fr"
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 60, in create_tsne_plot
+    fig = px.scatter(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1310, in process_args_into_dataframe
+    raise ValueError(
+ValueError: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+2025-05-04 02:54:24,265 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 02:54:28,268 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 02:54:28,269 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 03:12:41,897 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 03:12:49,801 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 03:12:49,801 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 03:17:07,708 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 03:17:08,408 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 03:17:08,408 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 03:18:13,017 - callbacks.clustering_callbacks - ERROR - Clustering error: could not convert string to float: 'Sous-engagé'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 88, in run_numerical_clustering
+    clusters = clusterer.fit_predict(processed_df)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\hdbscan\hdbscan_.py", line 1291, in fit_predict
+    self.fit(X)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\hdbscan\hdbscan_.py", line 1211, in fit
+    X = check_array(X, accept_sparse="csr", force_all_finite=False)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\utils\validation.py", line 1055, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\utils\_array_api.py", line 839, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\pandas\core\generic.py", line 2153, in __array__
+    arr = np.asarray(values, dtype=dtype)
+ValueError: could not convert string to float: 'Sous-engagé'
+2025-05-04 03:34:37,875 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 03:34:38,559 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 03:34:38,559 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 03:35:56,245 - callbacks.clustering_callbacks - INFO - Starting clustering with parameters: perplexity=30, features=['TAUX_ENGAGEMENT', 'VARIANCE'], min_size=10, min_samples=5
+2025-05-04 03:35:56,250 - callbacks.clustering_callbacks - INFO - Running HDBSCAN clustering... min_cluster_size=10, min_samples=5
+2025-05-04 03:35:56,283 - callbacks.clustering_callbacks - INFO - Running t-SNE with perplexity=30...
+2025-05-04 03:36:02,715 - callbacks.clustering_callbacks - INFO - Preparing results and visualizations...
+2025-05-04 03:36:03,473 - callbacks.clustering_callbacks - ERROR - Clustering error: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 109, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], valid_clusters,language="fr"),
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 60, in create_tsne_plot
+    fig = px.scatter(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1310, in process_args_into_dataframe
+    raise ValueError(
+ValueError: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+2025-05-04 03:39:57,319 - callbacks.clustering_callbacks - INFO - Starting clustering with parameters: perplexity=30, features=['TAUX_ENGAGEMENT', 'VARIANCE'], min_size=10, min_samples=5
+2025-05-04 03:39:57,319 - callbacks.clustering_callbacks - INFO - Running HDBSCAN clustering... min_cluster_size=10, min_samples=5
+2025-05-04 03:39:57,367 - callbacks.clustering_callbacks - INFO - Running t-SNE with perplexity=30...
+2025-05-04 03:39:58,057 - callbacks.clustering_callbacks - INFO - Starting clustering with parameters: perplexity=30, features=['TAUX_ENGAGEMENT', 'VARIANCE'], min_size=10, min_samples=5
+2025-05-04 03:39:58,086 - callbacks.clustering_callbacks - INFO - Running HDBSCAN clustering... min_cluster_size=10, min_samples=5
+2025-05-04 03:39:58,166 - callbacks.clustering_callbacks - INFO - Running t-SNE with perplexity=30...
+2025-05-04 03:40:06,328 - callbacks.clustering_callbacks - INFO - Preparing results and visualizations...
+2025-05-04 03:40:06,359 - callbacks.clustering_callbacks - ERROR - Clustering error: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 109, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], valid_clusters,language="fr"),
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 60, in create_tsne_plot
+    fig = px.scatter(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1310, in process_args_into_dataframe
+    raise ValueError(
+ValueError: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+2025-05-04 03:40:06,899 - callbacks.clustering_callbacks - INFO - Preparing results and visualizations...
+2025-05-04 03:40:06,930 - callbacks.clustering_callbacks - ERROR - Clustering error: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 109, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(projection, valid_clusters['CLUSTER'], valid_clusters,language="fr"),
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 60, in create_tsne_plot
+    fig = px.scatter(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1310, in process_args_into_dataframe
+    raise ValueError(
+ValueError: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+2025-05-04 04:34:16,035 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 04:34:16,737 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 04:34:16,738 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 04:35:06,341 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 04:35:06,840 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 04:35:06,841 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 04:35:11,180 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-04 04:35:36,456 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 04:35:37,177 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 04:35:37,177 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 04:42:20,739 - callbacks.clustering_callbacks - ERROR - Clustering error: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 149, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 66, in create_tsne_plot
+    title=t('tsne_projection', language),
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\helpers.py", line 23, in t
+    return translations.get(lang, {}).get(key, key)
+TypeError: unhashable type: 'dict'
+2025-05-04 06:45:41,099 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 06:45:45,715 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 06:45:45,715 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 06:46:51,820 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 06:46:52,103 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 06:46:52,103 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 06:47:15,197 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 06:47:15,500 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 06:47:15,500 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 06:48:36,562 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 06:48:36,856 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 06:48:36,856 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 06:50:05,944 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 06:50:06,327 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 06:50:06,327 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 06:51:10,361 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 06:51:10,716 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 06:51:10,716 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 06:51:14,349 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-04 06:51:33,562 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 06:51:33,951 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 06:51:33,951 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 06:52:43,803 - callbacks.clustering_callbacks - ERROR - Clustering error: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 149, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 66, in create_tsne_plot
+    title=t('tsne_projection', language),
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\helpers.py", line 23, in t
+    return translations.get(lang, {}).get(key, key)
+TypeError: unhashable type: 'dict'
+2025-05-04 06:55:45,111 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 06:55:45,402 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 06:55:45,402 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 06:58:44,782 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 06:58:45,060 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 06:58:45,060 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-04 07:10:01,092 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-04 07:10:01,407 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-04 07:10:01,407 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 13:33:25,558 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 13:33:35,718 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 13:33:35,718 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 13:33:59,500 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 13:34:22,750 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 13:34:23,458 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 13:34:23,458 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 13:54:07,907 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 13:54:08,297 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 13:54:08,297 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 13:54:13,230 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 13:54:27,533 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 13:54:27,824 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 13:54:27,824 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 15:26:52,920 - callbacks.clustering_callbacks - ERROR - Clustering error: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 149, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 66, in create_tsne_plot
+    title=t('tsne_projection', language),
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\helpers.py", line 23, in t
+    return translations.get(lang, {}).get(key, key)
+TypeError: unhashable type: 'dict'
+2025-05-05 15:39:16,246 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 15:39:21,229 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 15:39:21,229 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 15:39:35,863 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 15:39:53,801 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 15:39:54,143 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 15:39:54,144 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 15:44:03,932 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 15:44:04,233 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 15:44:04,233 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 15:50:59,022 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 15:50:59,375 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 15:50:59,375 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 15:51:03,428 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 15:51:17,845 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 15:51:18,115 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 15:51:18,115 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 15:52:16,930 - callbacks.clustering_callbacks - ERROR - Clustering error: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 150, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 66, in create_tsne_plot
+    title=t('tsne_projection', language),
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\helpers.py", line 23, in t
+    return translations.get(lang, {}).get(key, key)
+TypeError: unhashable type: 'dict'
+2025-05-05 16:02:31,261 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:02:31,628 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:02:31,628 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:08:39,072 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:08:39,579 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:08:39,579 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:08:43,813 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 16:08:58,835 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:08:59,172 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:08:59,172 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:09:36,932 - callbacks.clustering_callbacks - ERROR - Clustering error: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 151, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 66, in create_tsne_plot
+    title=t('tsne_projection', language),
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\helpers.py", line 23, in t
+    return translations.get(lang, {}).get(key, key)
+TypeError: unhashable type: 'dict'
+2025-05-05 16:22:36,806 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:22:37,078 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:22:37,078 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:28:26,433 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:28:26,781 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:28:26,781 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:28:33,800 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 16:28:52,149 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:28:52,843 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:28:52,843 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:34:36,295 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:34:36,738 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:34:36,738 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:34:42,743 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 16:35:03,120 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:35:03,417 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:35:03,417 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:35:56,194 - callbacks.clustering_callbacks - ERROR - Clustering error: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 152, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 60, in create_tsne_plot
+    fig = px.scatter(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\plotly\express\_core.py", line 1310, in process_args_into_dataframe
+    raise ValueError(
+ValueError: String or int arguments are only possible when a DataFrame or an array is provided in the `data_frame` argument. No DataFrame was provided, but argument 'custom_data_0' is of type str or int.
+2025-05-05 16:44:39,660 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:44:40,023 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:44:40,023 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:44:46,728 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 16:45:03,689 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:45:04,187 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:45:04,187 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:45:58,775 - callbacks.clustering_callbacks - ERROR - Clustering error: create_tsne_plot() got an unexpected keyword argument 'language'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 152, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(
+TypeError: create_tsne_plot() got an unexpected keyword argument 'language'
+2025-05-05 16:48:42,785 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:48:43,211 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:48:43,211 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:48:50,000 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 16:49:10,220 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:49:10,518 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:49:10,518 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:49:56,286 - callbacks.clustering_callbacks - ERROR - Clustering error: Les dimensions de projection, clusters et hover_data ne correspondent pas.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 151, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 69, in create_tsne_plot
+    raise ValueError("Les dimensions de projection, clusters et hover_data ne correspondent pas.")
+ValueError: Les dimensions de projection, clusters et hover_data ne correspondent pas.
+2025-05-05 16:53:24,229 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:53:24,653 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:53:24,653 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:53:29,438 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 16:53:48,097 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:53:48,435 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:53:48,435 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:54:42,764 - callbacks.clustering_callbacks - ERROR - Clustering error: '<' not supported between instances of 'float' and 'str'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 165, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 84, in create_tsne_plot
+    for i, cluster in enumerate(sorted(unique_clusters))}
+TypeError: '<' not supported between instances of 'float' and 'str'
+2025-05-05 16:55:51,553 - callbacks.clustering_callbacks - ERROR - Clustering error: '<' not supported between instances of 'float' and 'str'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 165, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 84, in create_tsne_plot
+    for i, cluster in enumerate(sorted(unique_clusters))}
+TypeError: '<' not supported between instances of 'float' and 'str'
+2025-05-05 16:56:05,573 - callbacks.clustering_callbacks - ERROR - Clustering error: '<' not supported between instances of 'float' and 'str'
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 165, in run_numerical_clustering
+    tsne_fig = create_tsne_plot(
+  File "C:\Users\hp\Desktop\PFE\my dash app\utils\visualizations.py", line 84, in create_tsne_plot
+    for i, cluster in enumerate(sorted(unique_clusters))}
+TypeError: '<' not supported between instances of 'float' and 'str'
+2025-05-05 16:58:17,795 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:58:18,179 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:58:18,179 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 16:58:22,320 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 16:58:37,977 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 16:58:38,305 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 16:58:38,306 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 17:12:51,741 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 17:12:52,121 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 17:12:52,121 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 17:12:56,623 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 17:13:15,833 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 17:13:16,275 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 17:13:16,275 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 17:24:24,883 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 17:24:25,233 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 17:24:25,233 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 17:24:29,244 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 17:24:49,737 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 17:24:50,218 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 17:24:50,218 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 17:25:32,681 - callbacks.clustering_callbacks - ERROR - Text clustering error: DataFrame constructor not properly called!
+2025-05-05 17:25:39,410 - callbacks.clustering_callbacks - ERROR - Text clustering error: DataFrame constructor not properly called!
+2025-05-05 17:25:40,195 - callbacks.clustering_callbacks - ERROR - Text clustering error: DataFrame constructor not properly called!
+2025-05-05 17:25:40,357 - callbacks.clustering_callbacks - ERROR - Text clustering error: DataFrame constructor not properly called!
+2025-05-05 17:25:41,210 - callbacks.clustering_callbacks - ERROR - Text clustering error: DataFrame constructor not properly called!
+2025-05-05 17:25:44,990 - callbacks.clustering_callbacks - ERROR - Text clustering error: DataFrame constructor not properly called!
+2025-05-05 17:25:45,544 - callbacks.clustering_callbacks - ERROR - Text clustering error: DataFrame constructor not properly called!
+2025-05-05 17:25:50,675 - callbacks.clustering_callbacks - ERROR - Text clustering error: DataFrame constructor not properly called!
+2025-05-05 17:25:53,588 - callbacks.clustering_callbacks - ERROR - Text clustering error: DataFrame constructor not properly called!
+2025-05-05 17:35:35,238 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 17:35:35,634 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 17:35:35,634 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 17:35:42,707 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 17:36:03,941 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 17:36:04,335 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 17:36:04,335 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 17:40:17,515 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 17:40:17,902 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 17:40:17,902 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 17:45:31,576 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 17:45:32,036 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 17:45:32,036 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 17:45:39,176 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-05 17:46:01,236 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 17:46:01,726 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 17:46:01,726 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 19:34:48,326 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-05 19:34:50,827 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-05 19:34:50,827 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-05 23:59:57,539 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 00:00:02,545 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 00:00:02,545 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 00:00:18,868 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 00:00:53,241 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 00:00:54,139 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 00:00:54,139 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 00:11:40,180 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 00:11:41,552 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 00:11:41,552 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 00:12:01,448 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 00:12:44,189 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 00:12:45,046 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 00:12:45,046 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 00:15:41,616 - callbacks.clustering_callbacks - ERROR - Clustering error: The parameter init="pca" cannot be used with metric="precomputed".
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 122, in run_numerical_clustering
+    projection = tsne.fit_transform(gower_matrix)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\manifold\_t_sne.py", line 1178, in fit_transform
+    embedding = self._fit(X)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\manifold\_t_sne.py", line 898, in _fit
+    raise ValueError(
+ValueError: The parameter init="pca" cannot be used with metric="precomputed".
+2025-05-06 00:16:18,801 - callbacks.clustering_callbacks - ERROR - Clustering error: The parameter init="pca" cannot be used with metric="precomputed".
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 122, in run_numerical_clustering
+    projection = tsne.fit_transform(gower_matrix)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\manifold\_t_sne.py", line 1178, in fit_transform
+    embedding = self._fit(X)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\sklearn\manifold\_t_sne.py", line 898, in _fit
+    raise ValueError(
+ValueError: The parameter init="pca" cannot be used with metric="precomputed".
+2025-05-06 00:19:18,583 - callbacks.clustering_callbacks - ERROR - Clustering error: All columns are categorical, use k-modes instead of k-prototypes.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 113, in run_numerical_clustering
+    clusters = kproto.fit_predict(X.values, categorical=cat_indices)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kmodes.py", line 154, in fit_predict
+    return self.fit(X, **kwargs).predict(X, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 161, in fit
+    self.n_iter_, self.epoch_costs_, self.gamma = k_prototypes(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 261, in k_prototypes
+    assert len(categorical) != X.shape[1], \
+AssertionError: All columns are categorical, use k-modes instead of k-prototypes.
+2025-05-06 00:27:03,549 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 00:27:12,052 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 00:27:12,053 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 00:44:45,284 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 00:44:55,818 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 00:44:55,818 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 00:45:21,252 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 00:45:37,505 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 00:45:37,987 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 00:45:37,987 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 01:01:55,697 - callbacks.clustering_callbacks - ERROR - Deep clustering error: 'NoneType' object has no attribute 'get'
+2025-05-06 01:03:45,465 - callbacks.clustering_callbacks - ERROR - Deep clustering error: 'NoneType' object has no attribute 'get'
+2025-05-06 01:17:19,645 - callbacks.clustering_callbacks - ERROR - Clustering error: Clustering algorithm could not initialize. Consider assigning the initial clusters manually.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 116, in run_numerical_clustering
+    clusters = kproto.fit_predict(X.values, categorical=cat_indices)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kmodes.py", line 154, in fit_predict
+    return self.fit(X, **kwargs).predict(X, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 161, in fit
+    self.n_iter_, self.epoch_costs_, self.gamma = k_prototypes(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 299, in k_prototypes
+    results.append(_k_prototypes_single(Xnum, Xcat, nnumattrs, ncatattrs,
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 410, in _k_prototypes_single
+    raise ValueError(
+ValueError: Clustering algorithm could not initialize. Consider assigning the initial clusters manually.
+2025-05-06 01:17:35,795 - callbacks.clustering_callbacks - ERROR - Clustering error: Clustering algorithm could not initialize. Consider assigning the initial clusters manually.
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\PFE\my dash app\callbacks\clustering_callbacks.py", line 116, in run_numerical_clustering
+    clusters = kproto.fit_predict(X.values, categorical=cat_indices)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kmodes.py", line 154, in fit_predict
+    return self.fit(X, **kwargs).predict(X, **kwargs)
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 161, in fit
+    self.n_iter_, self.epoch_costs_, self.gamma = k_prototypes(
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 299, in k_prototypes
+    results.append(_k_prototypes_single(Xnum, Xcat, nnumattrs, ncatattrs,
+  File "C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\kmodes\kprototypes.py", line 410, in _k_prototypes_single
+    raise ValueError(
+ValueError: Clustering algorithm could not initialize. Consider assigning the initial clusters manually.
+2025-05-06 02:37:33,572 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 02:37:47,263 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 02:37:47,264 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 12:07:49,753 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 12:07:52,659 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 12:07:52,659 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 12:33:11,103 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 12:33:11,963 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 12:33:11,964 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 12:37:21,783 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 12:37:22,172 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 12:37:22,172 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 12:38:14,573 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 12:38:14,993 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 12:38:14,993 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 12:38:41,385 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 12:38:41,768 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 12:38:41,768 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 13:19:02,698 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 13:19:03,103 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 13:19:03,103 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 13:19:09,347 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 13:19:30,321 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 13:19:31,015 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 13:19:31,015 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 13:28:11,312 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 13:28:19,958 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 13:28:19,958 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 13:28:47,877 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 13:29:04,210 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 13:29:04,918 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 13:29:04,918 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 13:49:13,984 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 13:49:14,398 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 13:49:14,398 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 13:49:19,452 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 13:49:44,347 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 13:49:45,048 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 13:49:45,049 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 13:55:06,821 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 13:55:07,371 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 13:55:07,372 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 13:59:46,219 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 13:59:46,518 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 13:59:46,518 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 14:01:06,951 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 14:01:07,334 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 14:01:07,334 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 14:01:16,014 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 14:01:30,926 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 14:01:31,227 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 14:01:31,227 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 14:04:42,008 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 14:04:42,031 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 14:04:42,413 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 14:04:42,414 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 14:04:42,427 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 14:04:42,427 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 14:04:49,718 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 14:04:49,722 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 14:05:17,102 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 14:05:17,136 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 14:05:17,903 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 14:05:17,903 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 14:05:17,920 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 14:05:17,920 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 14:10:56,794 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 14:10:57,113 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 14:10:57,113 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:24:51,658 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:24:53,902 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:24:53,902 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:27:41,490 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:27:41,797 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:27:41,797 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:29:17,119 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:29:17,595 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:29:17,595 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:30:38,198 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:30:38,520 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:30:38,520 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:31:39,370 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:31:39,765 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:31:39,765 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:31:50,591 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 21:32:07,865 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:32:08,187 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:32:08,187 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:41:06,257 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:41:06,930 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:41:06,930 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:41:14,415 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 21:41:32,996 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:41:33,351 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:41:33,351 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:44:22,322 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:44:22,744 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:44:22,745 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:50:29,149 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:50:29,478 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:50:29,478 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:53:07,852 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:53:07,862 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:53:08,213 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:53:08,213 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:53:08,218 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:53:08,219 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:53:16,213 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 21:53:16,809 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-06 21:53:36,026 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:53:36,449 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:53:36,450 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:53:36,793 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 21:53:37,210 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 21:53:37,210 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-06 21:54:26,471 - callbacks.clustering_callbacks - ERROR - Erreur de deep clustering: 'NoneType' object has no attribute 'get'
+2025-05-06 22:13:47,729 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-06 22:13:52,207 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-06 22:13:52,207 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 00:36:18,968 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 00:36:35,002 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-07 00:36:35,003 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 01:30:47,347 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 02:01:45,118 - huggingface_hub.utils._http - WARNING - '(ReadTimeoutError("HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out. (read timeout=10.0)"), '(Request ID: a7dd1644-7cc7-4c46-8936-12b7a41eab6e)')' thrown while requesting GET https://cas-bridge.xethub.hf.co/xet-bridge-us/621ffdc136468d709f1802b3/74a28f24cc74edf34e24357da2394976a3d41fd0bfb22666017f894bba6b30b5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20250507%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250507T010135Z&X-Amz-Expires=3600&X-Amz-Signature=e3162c1debd9974d6061fe2b8254a7301794da1bc5245ebef06287bc1a48b0fa&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model_qint8_avx512_vnni.onnx%3B+filename%3D%22model_qint8_avx512_vnni.onnx%22%3B&x-id=GetObject&Expires=1746583295&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0NjU4MzI5NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82MjFmZmRjMTM2NDY4ZDcwOWYxODAyYjMvNzRhMjhmMjRjYzc0ZWRmMzRlMjQzNTdkYTIzOTQ5NzZhM2Q0MWZkMGJmYjIyNjY2MDE3Zjg5NGJiYTZiMzBiNSoifV19&Signature=wI4-An4zNoWrVzJyR-frvrD3A1hskJFG8x1411l7iLQvVU0JbOAAume96tuwUQj7FbFlXTXon0sNHSga3mskjKb5XjtmwVT4qgYajL07d-Yi1X9DCJCn8ZYh2Fd9KZYdfr9GHx4Gn1BUUL0ME-TTcipo6rKpj-7H%7EHohE1DFaOfoS-N5rFcpc4CaXrPzfDZYi1UflQnDa1FcZHC7NzyAuKiTCCpFZpZ578ugfin5BGuqGb%7EVahsSY3GTVfHDQZcKB%7EaVriledv8ySaTiPyDiY8yF6mvO9D95LnjmVxI1q-Xa6a3%7EvzUnxCt%7EYchzoRcTHtFKYqG6dwCDVzoYT0Odzg__&Key-Pair-Id=K2L8F4GPSG1IFC
+2025-05-07 02:41:55,636 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 02:57:04,879 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-07 03:00:16,962 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 03:24:35,074 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 03:24:56,708 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-07 03:26:14,132 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 03:28:26,253 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 03:28:28,860 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-07 03:28:40,698 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 03:32:20,697 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 03:32:22,174 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-07 03:32:29,115 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 03:33:01,352 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 03:33:02,719 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-07 03:33:09,133 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 03:33:50,476 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 03:33:51,885 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-07 03:33:58,261 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 03:48:07,641 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 03:48:13,463 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-07 03:49:06,504 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 03:50:00,251 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-07 03:50:07,698 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 03:50:09,667 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-07 03:50:25,676 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 04:01:39,291 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 04:01:51,850 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-07 04:02:25,131 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 04:07:26,568 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 04:07:28,423 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-07 04:07:38,451 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 04:07:46,128 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-05-07 04:07:51,488 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-07 04:07:53,071 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device: cpu
+2025-05-07 04:08:02,214 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-07 04:13:50,794 - callbacks.clustering_callbacks - ERROR - Erreur de deep clustering: 'NoneType' object has no attribute 'get'
+2025-05-07 04:14:35,463 - callbacks.clustering_callbacks - ERROR - Erreur de deep clustering: 'NoneType' object has no attribute 'get'
+2025-05-07 04:14:38,630 - callbacks.clustering_callbacks - ERROR - Erreur de deep clustering: 'NoneType' object has no attribute 'get'
+2025-05-07 04:14:39,446 - callbacks.clustering_callbacks - ERROR - Erreur de deep clustering: 'NoneType' object has no attribute 'get'
+2025-05-07 04:14:45,115 - callbacks.clustering_callbacks - ERROR - Erreur de deep clustering: 'NoneType' object has no attribute 'get'

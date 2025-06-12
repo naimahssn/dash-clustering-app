@@ -1,0 +1,8 @@
+2025-05-01 13:58:34,584 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 13:58:35,469 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 13:58:35,469 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased
+2025-05-01 14:01:59,451 - tensorflow - WARNING - From C:\Users\hp\Desktop\PFE\my dash app\.venv\lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-01 14:02:00,311 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-05-01 14:02:00,311 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: distiluse-base-multilingual-cased

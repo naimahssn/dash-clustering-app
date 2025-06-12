@@ -1,0 +1,598 @@
+:root {
+  /* Palette principale - basée sur votre bleu #040348 */
+  --primary: #040348;           /* Votre bleu profond original */
+  --primary-dark: #020226;      /* Bleu plus foncé pour les hover */
+  --primary-light: #3c4c77;     /* Bleu clair pour les accents */
+  --primary-lighter: #8891b5;   /* Bleu très clair pour les backgrounds subtils */
+  --primary-subtle: #f0f2f8;    /* Bleu très pale pour les zones de contenu */
+
+  /* Arrière-plans - thème clair maintenu */
+  --background: #f8fafc;        /* Fond principal très clair */
+  --background-content: #ffffff; /* Fond des cartes et contenus */
+  --background-secondary: #f1f5f9; /* Fond secondaire */
+  --surface: #ffffff;           /* Surface des composants */
+  --surface-hover: #f8fafc;     /* Hover state des surfaces */
+  --surface-accent: var(--primary-subtle); /* Surface avec accent bleu subtil */
+
+  /* Textes */
+  --text-primary: #040348;      /* Texte principal très sombre */
+  --text-secondary: #475569;    /* Texte secondaire */
+  --text-muted: #64748b;        /* Texte atténué */
+  --text-light: #ffffff;        /* Texte clair pour fonds sombres */
+  --text-inverse: #f8fafc;      /* Texte inversé */
+
+  /* États et feedback - couleurs harmonisées avec le thème clair */
+  --success: #16a34a;           /* Vert moderne et clair */
+  --success-light: #f0fdf4;     /* Fond vert très clair */
+  --error: #dc2626;             /* Rouge moderne */
+  --error-light: #fef2f2;       /* Fond rouge clair */
+  --warning: #ea580c;           /* Orange moderne */
+  --warning-light: #fff7ed;     /* Fond orange clair */
+  --info: #0ea5e9;              /* Bleu cyan moderne */
+  --info-light: #f0f9ff;        /* Fond cyan clair */
+
+  /* Bordures et séparateurs - optimisées pour le thème clair */
+  --border: #e1e5e9;            /* Bordure principale */
+  --border-light: #f1f5f9;      /* Bordure légère */
+  --border-dark: #cbd5e1;       /* Bordure marquée */
+  --border-accent: rgba(4, 3, 72, 0.1); /* Bordure avec accent bleu */
+
+  /* Ombres - adaptées au thème clair avec touches de bleu */
+  --shadow-sm: 0 1px 2px 0 rgba(4, 3, 72, 0.05);
+  --shadow: 0 1px 3px 0 rgba(4, 3, 72, 0.1), 0 1px 2px 0 rgba(4, 3, 72, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(4, 3, 72, 0.1), 0 2px 4px -1px rgba(4, 3, 72, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(4, 3, 72, 0.1), 0 4px 6px -2px rgba(4, 3, 72, 0.05);
+  --shadow-colored: 0 4px 12px rgba(4, 3, 72, 0.15); /* Ombre colorée pour les éléments importants */
+
+  /* Rayons de bordure */
+  --radius-sm: 0.375rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+}
+
+/* Navbar personnalisée */
+.navbar-custom {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1040;
+    background-color: #040348 !important; /* Couleur de fond personnalisée */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: var(--text-light) !important;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-light) !important;
+  border-radius: var(--radius);
+  transform: translateY(-1px);
+}
+
+.navbar-custom .navbar-brand:hover {
+  transform: scale(1.02);
+}
+
+/* Barres de progression avec couleurs améliorées */
+.progress {
+  background-color: var(--background-secondary);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.progress-bar.bg-info {
+  background: linear-gradient(90deg, var(--info) 0%, #06b6d4 100%) !important;
+}
+
+.progress-bar.bg-primary {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%) !important;
+}
+
+.progress-bar.bg-success {
+  background: linear-gradient(90deg, var(--success) 0%, #10b981 100%) !important;
+}
+
+.progress-bar.bg-warning {
+  background: linear-gradient(90deg, var(--warning) 0%, #f59e0b 100%) !important;
+}
+
+/* Corps et mise en page */
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenu de la page */
+#page-content {
+  background-color: var(--background-content);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  border: 1px solid var(--border-light);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+#page-content:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Cartes et composants - avec accents bleus subtils */
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-colored);
+  transform: translateY(-1px);
+  border-color: var(--border-accent);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--surface-accent) 0%, var(--background-secondary) 100%);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Boutons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border: none;
+  color: var(--text-light);
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: var(--surface-hover);
+  border-color: var(--border-dark);
+  transform: translateY(-1px);
+}
+
+/* Alertes */
+.alert-success {
+  background-color: var(--success-light);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.alert-danger {
+  background-color: var(--error-light);
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.alert-warning {
+  background-color: var(--warning-light);
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.alert-info {
+  background-color: var(--info-light);
+  border-color: var(--info);
+  color: var(--info);
+}
+
+/* Formulaires */
+.form-control {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  color: var(--text-primary);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 0.2rem rgba(4, 3, 72, 0.15);
+  background-color: var(--surface);
+}
+
+.form-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Tables - avec hover effects améliorés */
+.table {
+  background-color: var(--surface);
+  color: var(--text-primary);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.table thead th {
+  background: linear-gradient(135deg, var(--surface-accent) 0%, var(--background-secondary) 100%);
+  border-bottom: 2px solid var(--border);
+  color: var(--text-primary);
+  font-weight: 600;
+  position: relative;
+}
+
+.table thead th::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.table tbody tr:hover {
+  background-color: var(--surface-accent);
+  transform: scale(1.001);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary-light) 0%, var(--primary) 100%);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--background-secondary);
+}
+
+/* Scrollbar Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-light) var(--background-secondary);
+}
+
+/* Hover sur les liens de navigation */
+.nav-link-hover:hover {
+  cursor: pointer;
+}
+
+/* Éléments avec accent bleu */
+.accent-border {
+  border-left: 4px solid var(--primary);
+}
+
+.accent-bg {
+  background: linear-gradient(135deg, var(--surface-accent) 0%, var(--surface) 100%);
+}
+
+/* Badges et pills */
+.badge-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--text-light);
+}
+
+.badge-light {
+  background-color: var(--surface-accent);
+  color: var(--primary);
+  border: 1px solid var(--border-accent);
+}
+
+/* Dividers avec style */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--border) 50%, transparent 100%);
+  margin: 1.5rem 0;
+}
+
+.divider-accent {
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--primary-light) 50%, transparent 100%);
+  margin: 2rem 0;
+}
+
+/* États de chargement */
+.loading-spinner {
+  border: 3px solid var(--background-secondary);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Tooltips */
+.tooltip-inner {
+  background-color: var(--text-primary);
+  color: var(--text-light);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Modals */
+.modal-content {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.modal-footer {
+  background-color: var(--background-secondary);
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Dark mode support - désactivé pour maintenir le thème clair */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #040348;
+    --background-content: #1e293b;
+    --background-secondary: #334155;
+    --surface: #1e293b;
+    --surface-hover: #334155;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --border-light: #475569;
+    --border-dark: #64748b;
+  }
+}
+*/
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #page-content {
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: var(--radius);
+  }
+
+  .navbar-custom .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+/* =======================================================
+   SURCHARGE DES COULEURS BOOTSTRAP POUR UTILISER #040348
+   ======================================================= */
+
+/* Surcharge des classes de couleur Bootstrap */
+.text-dark,
+.text-body,
+.text-body-emphasis {
+  color: #232360 !important;
+}
+
+/* Couleurs de texte principales Bootstrap */
+body {
+  color: #232360 !important;
+}
+
+/* Headers et titres */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #040348 !important;
+}
+
+/* Paragraphes et texte général */
+p, span, div, li, td, th {
+  color: #040348 !important;
+}
+
+/* Labels et texte de formulaires */
+.form-label,
+.form-text,
+label {
+  color: #040348 !important;
+}
+
+/* Navigation Bootstrap */
+.nav-link {
+  color: #040348 !important;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--primary-light) !important;
+}
+
+/* Liens généraux */
+a:not(.btn):not(.nav-link) {
+  color: #040348 !important;
+}
+
+a:not(.btn):not(.nav-link):hover {
+  color: var(--primary-light) !important;
+}
+
+
+
+/* Listes Bootstrap */
+.list-group-item {
+  color: #040348 !important;
+}
+
+/* Dropdowns Bootstrap */
+.dropdown-item {
+  color: #040348 !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: var(--primary-light) !important;
+}
+
+/* Modals Bootstrap */
+.modal-body,
+.modal-title,
+.modal-header {
+  color: #040348 !important;
+}
+
+/* Tableaux Bootstrap */
+.table td,
+.table th {
+  color: #040348 !important;
+}
+
+/* Breadcrumb */
+.breadcrumb-item,
+.breadcrumb-item a {
+  color: #040348 !important;
+}
+
+/* Pagination */
+.page-link {
+  color: #040348 !important;
+}
+
+/* Accordions */
+.accordion-button {
+  color: #040348 !important;
+}
+
+.accordion-body {
+  color: #040348 !important;
+}
+
+/* Offcanvas */
+.offcanvas-body,
+.offcanvas-title {
+  color: #040348 !important;
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+  color: #040348 !important;
+}
+
+.nav-pills .nav-link {
+  color: #040348 !important;
+}
+
+/* Toast */
+.toast-body {
+  color: #040348 !important;
+}
+
+/* =======================================================
+   VARIABLES CSS BOOTSTRAP (si vous utilisez Bootstrap 5.3+)
+   ======================================================= */
+
+:root {
+  /* Surcharge des variables CSS Bootstrap */
+  --bs-body-color: #040348 !important;
+  --bs-emphasis-color: #040348 !important;
+  --bs-secondary-color: rgba(4, 3, 72, 0.75) !important;
+  --bs-tertiary-color: rgba(4, 3, 72, 0.5) !important;
+
+  /* Variables de lien */
+  --bs-link-color: #040348 !important;
+  --bs-link-hover-color: var(--primary-light) !important;
+
+  /* Variables de texte */
+  --bs-heading-color: #040348 !important;
+}
+
+/* =======================================================
+   RÈGLES SPÉCIFIQUES POUR VOTRE THÈME
+   ======================================================= */
+
+/* Ajout à vos variables existantes */
+:root {
+  /* Mise à jour pour s'assurer que tout utilise votre couleur */
+  --text-primary: #040348 !important;
+  --text-body: #040348 !important;
+  --text-emphasis: #040348 !important;
+}
+
+/* Force l'application sur tous les éléments si nécessaire */
+* {
+  color: inherit;
+}
+
+
+/* Classes utilitaires personnalisées */
+.text-custom {
+  color: #040348 !important;
+}
+
+.text-custom-light {
+  color: var(--primary-light) !important;
+}
+
+.text-custom-muted {
+  color: rgba(4, 3, 72, 0.7) !important;
+}
+.dbc .card-header {
+    color: #201f8c !important;
+    background-color: white !important;
+}
