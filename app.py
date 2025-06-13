@@ -194,4 +194,5 @@ def register_all_callbacks(app):
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(debug=True, port=8051)
+    app.run(host="0.0.0.0", port=10000, debug=True)
+application = create_app().server
